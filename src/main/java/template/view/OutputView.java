@@ -5,8 +5,8 @@ public class OutputView {
     public OutputView() {
     }
 
-    public void print(String msg) {
-        System.out.println("[ERROR] msg");
+    public void printError(String msg) {
+        System.out.println("[ERROR]" + msg);
     }
 
 }
