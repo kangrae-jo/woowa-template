@@ -23,4 +23,12 @@ public class Domain {
         return Domain.of(Integer.parseInt(intAndStr[0].trim()), intAndStr[1].trim());
     }
 
+    public int getInteger() {
+        return integer;
+    }
+
+    public String getString() {
+        return string;
+    }
+
 }

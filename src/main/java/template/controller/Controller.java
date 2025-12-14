@@ -2,6 +2,7 @@ package template.controller;
 
 import java.util.function.Supplier;
 import template.domain.Domain;
+import template.dto.Result;
 import template.view.InputView;
 import template.view.OutputView;
 
@@ -17,6 +18,7 @@ public class Controller {
 
     public void run() {
         Domain domain = readDomain();
+        outputView.printResult(Result.from(domain));
     }
 
     private Domain readDomain() {
@@ -31,7 +33,7 @@ public class Controller {
             try {
                 return supplier.get();
             } catch (Exception e) {
-                outputView.printError("잘못된 형식을 입력했습니다.");
+                outputView.printError(e.getMessage());
             }
         }
     }
